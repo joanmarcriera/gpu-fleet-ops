@@ -1,0 +1,12 @@
+# host: node0   date: 2026-10-12T11:25:39+0000
+# cmd:  ibdev2netdev
+
+mlx5_0 port 1 ==> ibp170s0 (Down)
+mlx5_1 port 1 ==> ibp174s0 (Down)
+mlx5_2 port 1 ==> ibp178s0 (Down)
+mlx5_3 port 1 ==> ibp182s0 (Down)
+mlx5_4 port 1 ==> ibp140s0 (Down)
+mlx5_5 port 1 ==> ibp144s0 (Down)
+mlx5_6 port 1 ==> ibp148s0 (Down)
+mlx5_7 port 1 ==> ibp152s0 (Down)
+# exit: 0

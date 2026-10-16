@@ -1,0 +1,140 @@
+# host: node0   date: 2026-10-12T11:25:39+0000
+# cmd:  ibstat
+
+CA 'mlx5_0'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36053
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_1'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36055
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_2'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36054
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_3'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36056
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_4'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36052
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_5'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36057
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_6'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36059
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+CA 'mlx5_7'
+	CA type: MT4126
+	Number of ports: 1
+	Firmware version: 28.39.3004
+	Hardware version: 0
+	Node GUID: 0x<guid>
+	System image GUID: 0x<guid>
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 400
+		Base lid: 36058
+		LMC: 0
+		SM lid: 80
+		Capability mask: 0xa751ec48
+		Port GUID: 0x<guid>
+		Link layer: InfiniBand
+# exit: 0

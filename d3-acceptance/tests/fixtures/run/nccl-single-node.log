@@ -1,0 +1,2 @@
+# size count type redop root time algbw busbw wrong time algbw busbw wrong
+1073741824 268435456 float sum -1 4000 268.43 469.75 0 4010 267.76 468.58 0

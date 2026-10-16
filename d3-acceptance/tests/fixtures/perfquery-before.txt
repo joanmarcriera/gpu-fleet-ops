@@ -1,0 +1,4 @@
+# Synthetic parser fixture; not hardware output.
+LinkDownedCounter:................0
+PortRcvErrors:....................4
+SymbolErrorCounter:...............0

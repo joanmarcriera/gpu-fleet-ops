@@ -1,0 +1,24 @@
+# host: node0   date: 2026-10-12T11:25:39+0000
+# cmd:  bash -c lspci | grep -i -E "mellanox|nvidia"
+
+0b:00.0 Bridge: NVIDIA Corporation GH100 [H100 NVSwitch] (rev a1)
+0c:00.0 Bridge: NVIDIA Corporation GH100 [H100 NVSwitch] (rev a1)
+0d:00.0 Bridge: NVIDIA Corporation GH100 [H100 NVSwitch] (rev a1)
+0e:00.0 Bridge: NVIDIA Corporation GH100 [H100 NVSwitch] (rev a1)
+8c:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+8d:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+90:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+91:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+94:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+95:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+98:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+99:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+aa:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+ab:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+ae:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+af:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+b2:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+b3:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+b6:00.0 Infiniband controller: Mellanox Technologies ConnectX Family mlx5Gen Virtual Function
+b7:00.0 3D controller: NVIDIA Corporation GH100 [H100 SXM5 80GB] (rev a1)
+# exit: 0

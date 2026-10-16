@@ -1,0 +1,18 @@
+# host: node0  date: 2026-10-12T12:01:06+00:00
+# cmd: NCCL_ALGO=<algo> all_reduce_perf -b 1G -e 8G -f 2 -g 8 -n 20 -w 5
+# NCCL_ALGO=Ring
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+  1073741824     268435456     float     sum      -1  5198.54  206.55  361.46       0  5200.82  206.46  361.30       0
+  8589934592    2147483648     float     sum      -1  40809.6  210.49  368.35       0  40806.7  210.50  368.38       0
+# Avg bus bandwidth    : 365.34 
+# NCCL_ALGO=NVLS
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+  1073741824     268435456     float     sum      -1  4010.51  267.73  468.53       0  4010.11  267.76  468.58       0
+  8589934592    2147483648     float     sum      -1  31252.8  274.85  480.99       0  31301.1  274.43  480.25       0
+# Avg bus bandwidth    : 475.87 
+# NCCL_ALGO=Tree
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+  1073741824     268435456     float     sum      -1  6636.78  161.79  283.13       0  6624.33  162.09  283.66       0
+  8589934592    2147483648     float     sum      -1  50433.0  170.32  298.07       0  50492.9  170.12  297.71       0
+# Avg bus bandwidth    : 292.049 
+# [curated] NCCL_DEBUG=INFO lines removed; 0 torn table row(s) dropped (see SCRUB.md)

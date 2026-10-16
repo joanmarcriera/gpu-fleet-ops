@@ -1,0 +1,6 @@
+# host: node0   date: 2026-10-12T11:25:40+0000
+# cmd:  sminfo
+
+ibwarn: [9053] mad_rpc_open_port: can't open UMAD port ((null):0)
+sminfo: iberror: failed: Failed to open '(null)' port '0'
+# exit: 255

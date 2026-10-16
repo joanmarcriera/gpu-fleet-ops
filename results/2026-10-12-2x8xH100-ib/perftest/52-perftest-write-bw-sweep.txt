@@ -1,0 +1,53 @@
+# host: node0 -> node1   date: 2026-10-12T12:11:24+0000   attempts: 1
+# cmd:  ib_write_bw -d mlx5_0 -F -a -q 4 --report_gbits node1
+
+---------------------------------------------------------------------------------------
+                    RDMA_Write BW Test
+ Dual-port       : OFF		Device         : mlx5_0
+ Number of qps   : 4		Transport type : IB
+ Connection type : RC		Using SRQ      : OFF
+ PCIe relax order: ON		Lock-free      : OFF
+ ibv_wr* API     : ON		Using DDP      : OFF
+ TX depth        : 128
+ CQ Moderation   : 100
+ Mtu             : 4096[B]
+ Link type       : IB
+ Max inline data : 0[B]
+ rdma_cm QPs	 : OFF
+ Data ex. method : Ethernet
+---------------------------------------------------------------------------------------
+ local address: LID 0x8cd5 QPN 0x0ef0 PSN 0x82d59e RKey 0x040600 VAddr 0x00745defd6d000
+ local address: LID 0x8cd5 QPN 0x0ef1 PSN 0x105230 RKey 0x040600 VAddr 0x00745df056d000
+ local address: LID 0x8cd5 QPN 0x0ef2 PSN 0x7b9fba RKey 0x040600 VAddr 0x00745df0d6d000
+ local address: LID 0x8cd5 QPN 0x0ef3 PSN 0xc2bd81 RKey 0x040600 VAddr 0x00745df156d000
+ remote address: LID 0x1b53 QPN 0x0e48 PSN 0x68952e RKey 0x04066d VAddr 0x00732f20fd7000
+ remote address: LID 0x1b53 QPN 0x0e49 PSN 0xbe4280 RKey 0x04066d VAddr 0x00732f217d7000
+ remote address: LID 0x1b53 QPN 0x0e4a PSN 0x32d1ca RKey 0x04066d VAddr 0x00732f21fd7000
+ remote address: LID 0x1b53 QPN 0x0e4b PSN 0x7d6e51 RKey 0x04066d VAddr 0x00732f227d7000
+---------------------------------------------------------------------------------------
+ #bytes     #iterations    BW peak[Gb/sec]    BW average[Gb/sec]   MsgRate[Mpps]
+ 2          20000           0.091803            0.091539            5.721171
+ 4          20000            0.19               0.18   		     5.752411
+ 8          20000            0.37               0.37   		     5.802405
+ 16         20000            0.75               0.74   		     5.813422
+ 32         20000            1.49               1.49   		     5.803001
+ 64         20000            2.99               2.96   		     5.772951
+ 128        20000            5.89               5.89   		     5.747930
+ 256        20000            11.95              11.89  		     5.804612
+ 512        20000            23.83              23.76  		     5.801432
+ 1024       20000            47.65              47.36  		     5.781322
+ 2048       20000            95.31              94.99  		     5.797692
+ 4096       20000            192.21             191.72 		     5.850879
+ 8192       20000            381.23             379.10 		     5.784547
+ 16384      20000            394.34             393.98 		     3.005796
+ 32768      20000            394.63             394.57 		     1.505162
+ 65536      20000            394.91             394.82 		     0.753061
+ 131072     20000            394.91             394.90 		     0.376603
+ 262144     20000            394.94             394.94 		     0.188321
+ 524288     20000            394.96             394.96 		     0.094166
+ 1048576    20000            394.97             394.97 		     0.047084
+ 2097152    20000            394.97             394.97 		     0.023542
+ 4194304    20000            394.98             394.98 		     0.011771
+ 8388608    20000            394.98             394.98 		     0.005886
+---------------------------------------------------------------------------------------
+# exit: 0

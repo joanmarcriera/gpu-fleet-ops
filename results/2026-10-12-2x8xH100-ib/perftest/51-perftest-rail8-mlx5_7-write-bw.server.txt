@@ -1,0 +1,31 @@
+ WARNING: BW peak won't be measured in this run.
+
+************************************
+* Waiting for client to connect... *
+************************************
+---------------------------------------------------------------------------------------
+                    RDMA_Write BW Test
+ Dual-port       : OFF		Device         : mlx5_7
+ Number of qps   : 4		Transport type : IB
+ Connection type : RC		Using SRQ      : OFF
+ PCIe relax order: ON		Lock-free      : OFF
+ ibv_wr* API     : ON		Using DDP      : OFF
+ CQ Moderation   : 1
+ Mtu             : 4096[B]
+ Link type       : IB
+ Max inline data : 0[B]
+ rdma_cm QPs	 : OFF
+ Data ex. method : Ethernet
+---------------------------------------------------------------------------------------
+ local address: LID 0x1b5a QPN 0x0dd4 PSN 0x48a88a RKey 0x040665 VAddr 0x007f09397bd000
+ local address: LID 0x1b5a QPN 0x0dd5 PSN 0x5b28ac RKey 0x040665 VAddr 0x007f09398bd000
+ local address: LID 0x1b5a QPN 0x0dd6 PSN 0x5c5a86 RKey 0x040665 VAddr 0x007f09399bd000
+ local address: LID 0x1b5a QPN 0x0dd7 PSN 0x558e5d RKey 0x040665 VAddr 0x007f0939abd000
+ remote address: LID 0x8cda QPN 0x0e78 PSN 0xf79183 RKey 0x040600 VAddr 0x007922ebd21000
+ remote address: LID 0x8cda QPN 0x0e79 PSN 0xb010b1 RKey 0x040600 VAddr 0x007922ebe21000
+ remote address: LID 0x8cda QPN 0x0e7a PSN 0x93a2a7 RKey 0x040600 VAddr 0x007922ebf21000
+ remote address: LID 0x8cda QPN 0x0e7b PSN 0x18ea6a RKey 0x040600 VAddr 0x007922ec021000
+---------------------------------------------------------------------------------------
+ #bytes     #iterations    BW peak[Gb/sec]    BW average[Gb/sec]   MsgRate[Mpps]
+ 1048576    141297           0.00               395.09 		     0.047099
+---------------------------------------------------------------------------------------

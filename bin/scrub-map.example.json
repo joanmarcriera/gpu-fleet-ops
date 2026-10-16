@@ -1,0 +1,33 @@
+{
+ "literals": [
+  [
+   "instance-0000example0",
+   "node0"
+  ],
+  [
+   "instance-0000example1",
+   "node1"
+  ],
+  [
+   "198.51.100.10",
+   "node0"
+  ],
+  [
+   "198.51.100.72",
+   "node1"
+  ],
+  [
+   "198.51.100.8",
+   "old-node1"
+  ],
+  [
+   "/home/alice",
+   "/home/user"
+  ],
+  [
+   "alice@",
+   "user@"
+  ]
+ ],
+ "instance_prefix": "instance-"
+}

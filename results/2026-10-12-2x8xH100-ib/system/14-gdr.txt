@@ -1,0 +1,14 @@
+# host: node0   date: 2026-10-12T11:25:40+0000
+# cmd:  bash -c 
+  echo "## GPUDirect RDMA kernel module (nvidia_peermem) or the older nv_peer_mem:"
+  lsmod | grep -E "nvidia_peermem|nv_peer_mem" || echo "not loaded"
+  echo "## PCIe ACS on bridges (ACS on can block GPU-NIC peer traffic):"
+  lspci -vvv 2>/dev/null | grep -c "ACSCtl:.*SrcValid+" || true
+
+## GPUDirect RDMA kernel module (nvidia_peermem) or the older nv_peer_mem:
+nvidia_peermem         16384  0
+ib_uverbs             200704  3 nvidia_peermem,rdma_ucm,mlx5_ib
+nvidia              11657216  117 nvidia_uvm,nvidia_peermem,gdrdrv,nvidia_modeset
+## PCIe ACS on bridges (ACS on can block GPU-NIC peer traffic):
+0
+# exit: 0

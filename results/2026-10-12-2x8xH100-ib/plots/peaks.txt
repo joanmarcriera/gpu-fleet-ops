@@ -1,0 +1,40 @@
+41-nccl-single-run1.txt                    largest size    8 GiB  busbw   480.50 GB/s
+41-nccl-single-run2.txt                    largest size    8 GiB  busbw   480.24 GB/s
+41-nccl-single-run3.txt                    largest size    8 GiB  busbw   480.39 GB/s
+42-nccl-multi-run1.txt                     largest size    8 GiB  busbw   466.76 GB/s
+42-nccl-multi-run2.txt                     largest size    8 GiB  busbw   467.61 GB/s
+42-nccl-multi-run3.txt                     largest size    8 GiB  busbw   468.00 GB/s
+43-nccl-inject-one-rail.txt                largest size    1 GiB  busbw    91.46 GB/s
+44-nccl-inject-ib-disabled.txt             largest size  256 MiB  busbw     1.93 GB/s
+perftest rail1 mlx5_0  BW average  395.08 Gb/s = 98.77% of 400
+perftest rail2 mlx5_1  BW average  395.03 Gb/s = 98.76% of 400
+perftest rail3 mlx5_2  BW average  395.09 Gb/s = 98.77% of 400
+perftest rail4 mlx5_3  BW average  395.04 Gb/s = 98.76% of 400
+perftest rail5 mlx5_4  BW average  395.02 Gb/s = 98.75% of 400
+perftest rail6 mlx5_5  BW average  395.03 Gb/s = 98.76% of 400
+perftest rail7 mlx5_6  BW average  395.04 Gb/s = 98.76% of 400
+perftest rail8 mlx5_7  BW average  395.09 Gb/s = 98.77% of 400
+perftest rails min 395.02 max 395.09 Gb/s over 8 rails
+ladder 256 MiB Eight rails      busbw   388.35 GB/s  vs healthy   1.00x
+ladder 256 MiB One rail         busbw    90.35 GB/s  vs healthy   4.30x
+ladder 256 MiB InfiniBand off   busbw     1.93 GB/s  vs healthy 201.22x
+topology rail 0 mlx5_0: PIX with GPU4 (NUMA1), ib_write_bw 395.08 Gb/s
+topology rail 1 mlx5_1: PIX with GPU5 (NUMA1), ib_write_bw 395.03 Gb/s
+topology rail 2 mlx5_2: PIX with GPU6 (NUMA1), ib_write_bw 395.09 Gb/s
+topology rail 3 mlx5_3: PIX with GPU7 (NUMA1), ib_write_bw 395.04 Gb/s
+topology rail 4 mlx5_4: PIX with GPU0 (NUMA0), ib_write_bw 395.02 Gb/s
+topology rail 5 mlx5_5: PIX with GPU1 (NUMA0), ib_write_bw 395.03 Gb/s
+topology rail 6 mlx5_6: PIX with GPU2 (NUMA0), ib_write_bw 395.04 Gb/s
+topology rail 7 mlx5_7: PIX with GPU3 (NUMA0), ib_write_bw 395.09 Gb/s
+algorithms block order in 46: Ring, NVLS, Tree
+algorithms 1 node NVLS     8 GiB busbw   480.99 GB/s
+algorithms 1 node Ring     8 GiB busbw   368.35 GB/s
+algorithms 1 node Tree     8 GiB busbw   298.07 GB/s
+algorithms 2 nodes Ring     8 GiB busbw   332.10 GB/s
+algorithms 2 nodes default  8 GiB busbw   467.61 GB/s
+collectives 16 GPUs 4 GiB all_reduce  busbw   462.58 GB/s
+collectives 16 GPUs 4 GiB all_gather  busbw   318.27 GB/s
+collectives 16 GPUs 4 GiB all-to-all  busbw    72.30 GB/s
+resnet  1 GPUs median    3704.0 img/s over 2 runs, scaling 100.00%
+resnet  8 GPUs median   28195.7 img/s over 2 runs, scaling 95.15%
+resnet 16 GPUs median   56255.2 img/s over 3 runs, scaling 94.92%

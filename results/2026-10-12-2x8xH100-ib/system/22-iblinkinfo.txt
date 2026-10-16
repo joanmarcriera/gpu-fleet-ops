@@ -1,0 +1,6 @@
+# host: node0   date: 2026-10-12T11:25:40+0000
+# cmd:  timeout 300 iblinkinfo
+
+ibwarn: [9061] mad_rpc_open_port: can't open UMAD port ((null):0)
+Failed to open (null) port 0
+# exit: 1

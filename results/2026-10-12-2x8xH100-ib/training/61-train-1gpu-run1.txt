@@ -1,0 +1,2 @@
+# host: node0 date: 2026-10-12T12:15:20+00:00 shape=1gpu run=1
+RESULT {"world_size": 1, "per_gpu_batch": 128, "steps": 60, "seconds": 2.07, "images_per_sec": 3715.4, "images_per_sec_per_gpu": 3715.4, "torch": "2.11.0+cu128", "nccl": "2.28.9"}

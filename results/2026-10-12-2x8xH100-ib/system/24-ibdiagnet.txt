@@ -1,0 +1,76 @@
+# host: node0   date: 2026-10-12T11:25:40+0000
+# cmd:  timeout 900 ibdiagnet -o /home/user/lab2/results/node0/ibdiagnet
+
+Running version:   "IBDIAGNET 2.19.2.MLNX20241029.46cf627","IBDIAG 2.1.1.46cf627","IBDM 2.1.1.46cf627","IBIS 18.0.0.8f06e82"
+Running on host:   node0
+Binary path:       /usr/bin/ibdiagnet
+Running command:   ibdiagnet -o /home/user/lab2/results/node0/ibdiagnet 
+Running timestamp: 2026-10-12 11:25:40 UTC +0000
+
+Switch label port numbering explanation:
+  Quantum2 switch split mode: ASIC/Cage/Port/Split, e.g 1/1/1/1
+  Quantum2 switch no split mode: ASIC/Cage/Port
+  Quantum switch split mode: Port/Split
+  Quantum switch no split mode: Port
+
+
+----------
+Load Plugins from:
+/usr/share/ibdiagnet2.1.1/plugins/
+(You can specify more paths to be looked in with "IBDIAGNET_PLUGINS_PATH" env variable)
+
+Plugin Name                                   Result     Comment
+libibdiagnet_phy_diag_plugin-2.1.1            Succeeded  Plugin loaded
+libibdiagnet_cable_diag_plugin-2.1.1          Succeeded  Plugin loaded
+
+---------------------------------------------
+Discovery
+-E- Failed to initialize - Failed to set port of ibis object, err=Ibis could't find viable ports in the system
+-I- Start Fabric Discover
+-I- Discovering ... 0 Nodes (0 Switches & 0 CAs) discovered.
+-I- Fill NodeDesc data
+-I- Retrieving... 0/0 Request Port Nodes (0/0 Switches & 0/0 CAs) retrieved.
+-I- NodeDesc finished successfully 
+-E- Fabric Discover failed, err=IBDiag initialize wasn't done
+-E- Fabric Discover failed, MAD err=Ibis could't find viable ports in the system
+
+---------------------------------------------
+Fabric Summary
+
+Total Nodes             : 0
+IB Switches             : 0
+IB Channel Adapters     : 0
+IB Aggregation Nodes    : 0
+IB Routers              : 0
+
+Adaptive Routing is enabled on 0 switches.
+
+Total number of links   : 0
+
+Master SM  : No Master SM
+Standby SM : No Standby SM
+
+---------------------------------------------
+Summary
+-I- Stage                               Warnings   Errors     Comment   
+-I- Discovery                                                 NA
+-I- Lids Check                                                NA
+-I- Links Check                                               NA
+-I- Subnet Manager                                            NA
+-I- Port Counters                                             NA
+-I- Nodes Information                                         NA
+-I- Speed / Width checks                                      NA
+-I- Virtualization                                            NA
+-I- Partition Keys                                            NA
+-I- Temperature Sensing                                       NA
+-I- Routers                                                   NA
+-I- Post Reports Generation                                   NA
+
+-I- You can find detailed errors/warnings in: /home/user/lab2/results/node0/ibdiagnet/ibdiagnet2.log
+
+
+-I- Database                            : /home/user/lab2/results/node0/ibdiagnet/ibdiagnet2.db_csv
+
+
+-E- A fatal error occurred, exiting...
+# exit: 1

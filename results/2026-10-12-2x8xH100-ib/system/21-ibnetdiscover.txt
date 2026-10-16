@@ -1,0 +1,8 @@
+# host: node0   date: 2026-10-12T11:25:40+0000
+# cmd:  timeout 300 ibnetdiscover
+
+ibwarn: [9057] mad_rpc_open_port: can't open UMAD port ((null):0)
+./libibnetdisc/ibnetdisc.c:798; can't open MAD port ((null):0)
+ibnetdiscover: iberror: failed: discover failed
+
+# exit: 255

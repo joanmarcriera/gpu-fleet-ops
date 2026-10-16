@@ -1,0 +1,40 @@
+# host: node0   date: 2026-10-12T12:04:33+0000
+# cmd:  timeout 900 mpirun -np 16 -H node0:8,node1:8 --map-by ppr:8:node --bind-to none --mca btl_tcp_if_include eth0 --mca oob_tcp_if_include eth0 -x PATH -x LD_LIBRARY_PATH -x NCCL_DEBUG -x NCCL_DEBUG_SUBSYS -x NCCL_IB_HCA -x NCCL_SOCKET_IFNAME -x NCCL_NET_GDR_LEVEL -x NCCL_TOPO_DUMP_FILE /home/user/nccl-tests/build/all_reduce_perf -b 1M -e 1G -f 4 -w 5 -n 20 -c 1 -g 1
+# nccl-tests version 2.21.1 (afd59ab) nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 1073741824 step: 4(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0 unalign: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  21901 on node0 device  0 [0000:8d:00] NVIDIA H100 80GB HBM3
+#  Rank  1 Group  0 Pid  21902 on node0 device  1 [0000:91:00] NVIDIA H100 80GB HBM3
+#  Rank  2 Group  0 Pid  21903 on node0 device  2 [0000:95:00] NVIDIA H100 80GB HBM3
+#  Rank  3 Group  0 Pid  21904 on node0 device  3 [0000:99:00] NVIDIA H100 80GB HBM3
+#  Rank  4 Group  0 Pid  21905 on node0 device  4 [0000:ab:00] NVIDIA H100 80GB HBM3
+#  Rank  5 Group  0 Pid  21908 on node0 device  5 [0000:af:00] NVIDIA H100 80GB HBM3
+#  Rank  6 Group  0 Pid  21912 on node0 device  6 [0000:b3:00] NVIDIA H100 80GB HBM3
+#  Rank  7 Group  0 Pid  21914 on node0 device  7 [0000:b7:00] NVIDIA H100 80GB HBM3
+#  Rank  8 Group  0 Pid   9667 on node1 device  0 [0000:8d:00] NVIDIA H100 80GB HBM3
+#  Rank  9 Group  0 Pid   9668 on node1 device  1 [0000:91:00] NVIDIA H100 80GB HBM3
+#  Rank 10 Group  0 Pid   9669 on node1 device  2 [0000:95:00] NVIDIA H100 80GB HBM3
+#  Rank 11 Group  0 Pid   9670 on node1 device  3 [0000:99:00] NVIDIA H100 80GB HBM3
+#  Rank 12 Group  0 Pid   9671 on node1 device  4 [0000:ab:00] NVIDIA H100 80GB HBM3
+#  Rank 13 Group  0 Pid   9673 on node1 device  5 [0000:af:00] NVIDIA H100 80GB HBM3
+#  Rank 14 Group  0 Pid   9677 on node1 device  6 [0000:b3:00] NVIDIA H100 80GB HBM3
+#  Rank 15 Group  0 Pid   9680 on node1 device  7 [0000:b7:00] NVIDIA H100 80GB HBM3
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)        
+     4194304       1048576     float     sum      -1   176.67   23.74   44.52       0   175.14   23.95   44.90       0
+    16777216       4194304     float     sum      -1   434.69   38.60   72.37       0   440.20   38.11   71.46       0
+    67108864      16777216     float     sum      -1  1470.62   45.63   85.56       0  1462.16   45.90   86.06       0
+   268435456      67108864     float     sum      -1  5570.59   48.19   90.35       0  5570.63   48.19   90.35       0
+  1073741824     268435456     float     sum      -1  22012.4   48.78   91.46       0  22047.1   48.70   91.32       0
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 66.9535 
+#
+# Collective test concluded: all_reduce_perf
+#
+# exit: 139
+# [curated] NCCL_DEBUG channel lines by transport: NET/SPCX_v10 +GDRDMA x64
+# [curated] NCCL_DEBUG=INFO lines removed; 1 torn table row(s) dropped (see SCRUB.md)

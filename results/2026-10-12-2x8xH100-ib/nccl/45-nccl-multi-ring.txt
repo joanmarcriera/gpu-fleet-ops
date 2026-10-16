@@ -1,0 +1,60 @@
+# host: node0   date: 2026-10-12T12:03:45+0000
+# cmd:  timeout 900 mpirun -np 16 -H node0:8,node1:8 --map-by ppr:8:node --bind-to none --mca btl_tcp_if_include eth0 --mca oob_tcp_if_include eth0 -x PATH -x LD_LIBRARY_PATH -x NCCL_DEBUG -x NCCL_DEBUG_SUBSYS -x NCCL_IB_HCA -x NCCL_SOCKET_IFNAME -x NCCL_NET_GDR_LEVEL -x NCCL_TOPO_DUMP_FILE -x NCCL_ALGO /home/user/nccl-tests/build/all_reduce_perf -b 8 -e 8G -f 2 -w 5 -n 20 -c 1 -g 1
+# nccl-tests version 2.21.1 (afd59ab) nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8 maxBytes 8589934592 step: 2(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0 unalign: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  21290 on node0 device  0 [0000:8d:00] NVIDIA H100 80GB HBM3
+#  Rank  1 Group  0 Pid  21291 on node0 device  1 [0000:91:00] NVIDIA H100 80GB HBM3
+#  Rank  2 Group  0 Pid  21292 on node0 device  2 [0000:95:00] NVIDIA H100 80GB HBM3
+#  Rank  3 Group  0 Pid  21293 on node0 device  3 [0000:99:00] NVIDIA H100 80GB HBM3
+#  Rank  4 Group  0 Pid  21294 on node0 device  4 [0000:ab:00] NVIDIA H100 80GB HBM3
+#  Rank  5 Group  0 Pid  21297 on node0 device  5 [0000:af:00] NVIDIA H100 80GB HBM3
+#  Rank  6 Group  0 Pid  21299 on node0 device  6 [0000:b3:00] NVIDIA H100 80GB HBM3
+#  Rank  7 Group  0 Pid  21303 on node0 device  7 [0000:b7:00] NVIDIA H100 80GB HBM3
+#  Rank  8 Group  0 Pid   9196 on node1 device  0 [0000:8d:00] NVIDIA H100 80GB HBM3
+#  Rank  9 Group  0 Pid   9197 on node1 device  1 [0000:91:00] NVIDIA H100 80GB HBM3
+#  Rank 10 Group  0 Pid   9198 on node1 device  2 [0000:95:00] NVIDIA H100 80GB HBM3
+#  Rank 11 Group  0 Pid   9199 on node1 device  3 [0000:99:00] NVIDIA H100 80GB HBM3
+#  Rank 12 Group  0 Pid   9200 on node1 device  4 [0000:ab:00] NVIDIA H100 80GB HBM3
+#  Rank 13 Group  0 Pid   9203 on node1 device  5 [0000:af:00] NVIDIA H100 80GB HBM3
+#  Rank 14 Group  0 Pid   9207 on node1 device  6 [0000:b3:00] NVIDIA H100 80GB HBM3
+#  Rank 15 Group  0 Pid   9210 on node1 device  7 [0000:b7:00] NVIDIA H100 80GB HBM3
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)        
+          16             4     float     sum      -1    36.37    0.00    0.00       0    36.16    0.00    0.00       0
+          32             8     float     sum      -1    38.62    0.00    0.00       0    38.49    0.00    0.00       0
+          64            16     float     sum      -1    53.31    0.00    0.00       0    41.01    0.00    0.00       0
+         128            32     float     sum      -1    42.99    0.00    0.01       0    42.58    0.00    0.01       0
+         256            64     float     sum      -1    44.58    0.01    0.01       0    44.12    0.01    0.01       0
+         512           128     float     sum      -1    44.62    0.01    0.02       0    44.31    0.01    0.02       0
+        1024           256     float     sum      -1    45.51    0.02    0.04       0    44.80    0.02    0.04       0
+        2048           512     float     sum      -1    45.98    0.04    0.08       0    45.25    0.05    0.08       0
+        4096          1024     float     sum      -1    46.88    0.09    0.16       0    46.04    0.09    0.17       0
+        8192          2048     float     sum      -1    46.96    0.17    0.33       0    46.54    0.18    0.33       0
+       16384          4096     float     sum      -1    48.33    0.34    0.64       0    47.53    0.34    0.65       0
+       32768          8192     float     sum      -1    49.98    0.66    1.23       0    49.64    0.66    1.24       0
+       65536         16384     float     sum      -1    61.91    1.06    1.98       0    52.93    1.24    2.32       0
+      131072         32768     float     sum      -1    60.92    2.15    4.03       0    62.97    2.08    3.90       0
+      262144         65536     float     sum      -1    64.29    4.08    7.65       0    65.09    4.03    7.55       0
+      524288        131072     float     sum      -1    68.77    7.62   14.29       0    66.44    7.89   14.80       0
+     1048576        262144     float     sum      -1   112.36    9.33   17.50       0   109.63    9.56   17.93       0
+     2097152        524288     float     sum      -1   115.66   18.13   34.00       0   114.81   18.27   34.25       0
+     4194304       1048576     float     sum      -1   124.13   33.79   63.36       0   123.12   34.07   63.88       0
+     8388608       2097152     float     sum      -1   148.96   56.32  105.59       0   148.69   56.42  105.78       0
+    16777216       4194304     float     sum      -1   208.03   80.65  151.21       0   205.14   81.79  153.35       0
+    33554432       8388608     float     sum      -1   319.08  105.16  197.18       0   317.78  105.59  197.98       0
+    67108864      16777216     float     sum      -1   507.92  132.13  247.74       0   507.49  132.24  247.94       0
+   134217728      33554432     float     sum      -1  1130.60  118.71  222.59       0  1131.72  118.60  222.37       0
+   268435456      67108864     float     sum      -1  1793.88  149.64  280.57       0  1796.66  149.41  280.14       0
+   536870912     134217728     float     sum      -1  3105.45  172.88  324.15       0  3121.48  171.99  322.49       0
+  1073741824     268435456     float     sum      -1  6131.32  175.12  328.36       0  6128.08  175.22  328.53       0
+  2147483648     536870912     float     sum      -1  12378.8  173.48  325.28       0  12171.3  176.44  330.82       0
+  4294967296    1073741824     float     sum      -1  24250.2  177.11  332.08       0  24419.4  175.88  329.78       0
+  8589934592    2147483648     float     sum      -1  48498.5  177.12  332.10       0  48470.1  177.22  332.29       0
+# exit: 139
+# [curated] NCCL_DEBUG channel lines by transport: NET/SPCX_v10 +GDRDMA x64
+# [curated] NCCL_DEBUG=INFO lines removed; 1 torn table row(s) dropped (see SCRUB.md)

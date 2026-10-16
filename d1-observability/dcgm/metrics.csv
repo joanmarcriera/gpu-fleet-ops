@@ -1,0 +1,21 @@
+# Field name, Prometheus type, help text
+# NVIDIA documents field-value watches on GeForce, but not every field is
+# emitted by every GPU/driver. RTX 4060: the two ECC rows are unavailable;
+# memory temperature is expected to be unavailable; violation/event fields
+# remain conditional until observed on the target driver. Missing series are
+# N/A, not zero. All configured names below are valid for exporter 4.4.1-4.6.0.
+DCGM_FI_DEV_GPU_UTIL, gauge, GPU utilization in percent.
+DCGM_FI_DEV_SM_CLOCK, gauge, SM clock frequency in MHz.
+DCGM_FI_DEV_FB_USED, gauge, Framebuffer memory used in MiB.
+DCGM_FI_DEV_FB_FREE, gauge, Framebuffer memory free in MiB.
+DCGM_FI_DEV_POWER_USAGE, gauge, Board power draw in watts.
+DCGM_FI_DEV_GPU_TEMP, gauge, GPU temperature in Celsius.
+DCGM_FI_DEV_MEMORY_TEMP, gauge, Memory temperature in Celsius (not expected on RTX 4060).
+DCGM_FI_DEV_POWER_VIOLATION, counter, Time limited by the power ceiling in nanoseconds.
+DCGM_FI_DEV_THERMAL_VIOLATION, counter, Time limited by thermal conditions in nanoseconds.
+DCGM_FI_DEV_ECC_DBE_VOL_TOTAL, counter, Volatile double-bit ECC errors (unavailable on RTX 4060).
+DCGM_FI_DEV_ECC_DBE_AGG_TOTAL, counter, Aggregate double-bit ECC errors (unavailable on RTX 4060).
+DCGM_FI_DEV_XID_ERRORS, gauge, Most recent XID error code.
+DCGM_EXP_XID_ERRORS_COUNT, gauge, XID samples in the exporter rolling window.
+DCGM_FI_DEV_CLOCKS_EVENT_REASONS, gauge, Clock event reason bitmask.
+DCGM_FI_DRIVER_VERSION, label, NVIDIA driver version.

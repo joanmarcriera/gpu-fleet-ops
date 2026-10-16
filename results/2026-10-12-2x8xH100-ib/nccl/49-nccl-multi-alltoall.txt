@@ -1,0 +1,41 @@
+# host: node0 date: 2026-10-12T12:14:16+00:00
+# cmd: NCCL_NET_PLUGIN=none mpirun -np 16 -H node0:8,node1:8 alltoall_perf -b 1M -e 4G -f 4 -w 5 -n 20 -c 1 -g 1
+# nccl-tests version 2.21.1 (afd59ab) nccl-headers=22602 nccl-library=22602
+# Collective test starting: alltoall_perf
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 4294967296 step: 4(factor) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0 unalign: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  28057 on node0 device  0 [0000:8d:00] NVIDIA H100 80GB HBM3
+#  Rank  1 Group  0 Pid  28058 on node0 device  1 [0000:91:00] NVIDIA H100 80GB HBM3
+#  Rank  2 Group  0 Pid  28059 on node0 device  2 [0000:95:00] NVIDIA H100 80GB HBM3
+#  Rank  3 Group  0 Pid  28060 on node0 device  3 [0000:99:00] NVIDIA H100 80GB HBM3
+#  Rank  4 Group  0 Pid  28061 on node0 device  4 [0000:ab:00] NVIDIA H100 80GB HBM3
+#  Rank  5 Group  0 Pid  28064 on node0 device  5 [0000:af:00] NVIDIA H100 80GB HBM3
+#  Rank  6 Group  0 Pid  28067 on node0 device  6 [0000:b3:00] NVIDIA H100 80GB HBM3
+#  Rank  7 Group  0 Pid  28070 on node0 device  7 [0000:b7:00] NVIDIA H100 80GB HBM3
+#  Rank  8 Group  0 Pid  14123 on node1 device  0 [0000:8d:00] NVIDIA H100 80GB HBM3
+#  Rank  9 Group  0 Pid  14124 on node1 device  1 [0000:91:00] NVIDIA H100 80GB HBM3
+#  Rank 10 Group  0 Pid  14125 on node1 device  2 [0000:95:00] NVIDIA H100 80GB HBM3
+#  Rank 11 Group  0 Pid  14126 on node1 device  3 [0000:99:00] NVIDIA H100 80GB HBM3
+#  Rank 12 Group  0 Pid  14127 on node1 device  4 [0000:ab:00] NVIDIA H100 80GB HBM3
+#  Rank 13 Group  0 Pid  14129 on node1 device  5 [0000:af:00] NVIDIA H100 80GB HBM3
+#  Rank 14 Group  0 Pid  14131 on node1 device  6 [0000:b3:00] NVIDIA H100 80GB HBM3
+#  Rank 15 Group  0 Pid  14135 on node1 device  7 [0000:b7:00] NVIDIA H100 80GB HBM3
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)        
+     4194304         65536     float    none      -1   131.14   31.98   29.98       0   120.30   34.87   32.69    N/A
+    16777216        262144     float    none      -1   305.37   54.94   51.51       0   300.57   55.82   52.33    N/A
+    67108864       1048576     float    none      -1   972.68   68.99   64.68       0   973.38   68.94   64.63    N/A
+   268435456       4194304     float    none      -1  3615.12   74.25   69.61       0  3610.43   74.35   69.70    N/A
+  1073741824      16777216     float    none      -1  13958.4   76.92   72.12       0  13972.1   76.85   72.05    N/A
+  4294967296      67108864     float    none      -1  55688.4   77.13   72.30       0  55459.2   77.44   72.60    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 53.3934 
+#
+# Collective test concluded: alltoall_perf
+#
+# exit: 0
+# [curated] NCCL_DEBUG channel lines by transport: NET/IB x224, NET/IB +GDRDMA x288
+# [curated] NCCL_DEBUG=INFO lines removed; 1 torn table row(s) dropped (see SCRUB.md)

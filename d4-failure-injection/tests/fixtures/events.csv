@@ -1,0 +1,5 @@
+epoch_s,utc,experiment_id,checkpoint_interval,event,rank,detail
+1003.0,synthetic,interval-25,25,injected,1,sigkill
+1004.0,synthetic,interval-25,25,detected,1,sibling_exit
+2003.0,synthetic,interval-100,100,injected,1,sigkill
+2005.0,synthetic,interval-100,100,detected,1,sibling_exit

@@ -1,0 +1,20 @@
+# host: node0   date: 2026-10-12T11:25:37+0000
+# cmd:  bash -c 
+  echo "driver: $(nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1)"
+  echo "cuda (nvcc): $(nvcc --version 2>/dev/null | tail -1)"
+  echo "nccl pkg: $(dpkg -l 2>/dev/null | awk "/libnccl2/{print \$3}" | head -1)"
+  echo "ofed: $(ofed_info -s 2>/dev/null || echo none)"
+  echo "rdma-core: $(dpkg -l 2>/dev/null | awk "/ rdma-core /{print \$3}")"
+  echo "mpi: $(mpirun --version 2>/dev/null | head -1)"
+  echo "perftest: $(dpkg -l 2>/dev/null | awk "/ perftest /{print \$3}")"
+  echo "hca fw: $(ibv_devinfo 2>/dev/null | awk "/fw_ver/{print \$2}" | sort -u | paste -sd" " -)"
+
+driver: 570.211.01
+cuda (nvcc): Build cuda_12.8.r12.8/compiler.35583870_0
+nccl pkg: 2.26.2-1+cuda12.8
+ofed: OFED-internal-24.10-2.1.8:
+rdma-core: 2410mlnx54-1.2410068
+mpi: mpirun (Open MPI) 4.1.9a1
+perftest: 24.10.0-0.65.g9093bae.2410068
+hca fw: 28.39.3004
+# exit: 0

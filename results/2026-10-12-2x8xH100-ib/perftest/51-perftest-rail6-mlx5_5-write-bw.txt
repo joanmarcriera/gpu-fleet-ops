@@ -1,0 +1,32 @@
+# host: node0 -> node1   date: 2026-10-12T12:10:51+0000   attempts: 1
+# cmd:  ib_write_bw -d mlx5_5 -F -s 1048576 -q 4 -D 5 --report_gbits node1
+
+ WARNING: BW peak won't be measured in this run.
+---------------------------------------------------------------------------------------
+                    RDMA_Write BW Test
+ Dual-port       : OFF		Device         : mlx5_5
+ Number of qps   : 4		Transport type : IB
+ Connection type : RC		Using SRQ      : OFF
+ PCIe relax order: ON		Lock-free      : OFF
+ ibv_wr* API     : ON		Using DDP      : OFF
+ TX depth        : 128
+ CQ Moderation   : 1
+ Mtu             : 4096[B]
+ Link type       : IB
+ Max inline data : 0[B]
+ rdma_cm QPs	 : OFF
+ Data ex. method : Ethernet
+---------------------------------------------------------------------------------------
+ local address: LID 0x8cd9 QPN 0x0e78 PSN 0x77239e RKey 0x040600 VAddr 0x0071293a5ff000
+ local address: LID 0x8cd9 QPN 0x0e79 PSN 0x298830 RKey 0x040600 VAddr 0x0071293a6ff000
+ local address: LID 0x8cd9 QPN 0x0e7a PSN 0xbb9dba RKey 0x040600 VAddr 0x0071293a7ff000
+ local address: LID 0x8cd9 QPN 0x0e7b PSN 0x35e381 RKey 0x040600 VAddr 0x0071293a8ff000
+ remote address: LID 0x1b59 QPN 0x0dd4 PSN 0x118a27 RKey 0x040d66 VAddr 0x0076a6387ff000
+ remote address: LID 0x1b59 QPN 0x0dd5 PSN 0xc8b9bc RKey 0x040d66 VAddr 0x0076a6388ff000
+ remote address: LID 0x1b59 QPN 0x0dd6 PSN 0xa10b20 RKey 0x040d66 VAddr 0x0076a6389ff000
+ remote address: LID 0x1b59 QPN 0x0dd7 PSN 0xc0a8b8 RKey 0x040d66 VAddr 0x0076a638aff000
+---------------------------------------------------------------------------------------
+ #bytes     #iterations    BW peak[Gb/sec]    BW average[Gb/sec]   MsgRate[Mpps]
+ 1048576    141276           0.00               395.03 		     0.047092
+---------------------------------------------------------------------------------------
+# exit: 0

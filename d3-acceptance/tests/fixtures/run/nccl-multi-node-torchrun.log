@@ -1,0 +1,2 @@
+size_bytes iterations avg_time_s algbw_GBps busbw_GBps
+1073741824 20 0.010000000 107.374 201.326

@@ -1,0 +1,53 @@
+services:
+  dcgm-exporter:
+    image: docker.io/nvidia/dcgm-exporter:4.4.1-4.6.0-ubuntu22.04
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    gpus: all
+    command:
+      - --collectors
+      - /etc/dcgm-exporter/metrics.csv
+      - --collect-interval
+      - "5000"
+    volumes:
+      - ./dcgm/metrics.csv:/etc/dcgm-exporter/metrics.csv:ro
+    ports:
+      - "127.0.0.1:9400:9400"
+
+  prometheus:
+    image: docker.io/prom/prometheus:v3.5.0
+    restart: unless-stopped
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=30d
+      - --web.enable-lifecycle
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    depends_on:
+      - dcgm-exporter
+
+  grafana:
+    image: docker.io/grafana/grafana:12.1.1
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER:-admin}"
+      GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD:-change-me-before-exposing}"
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - prometheus
+
+volumes:
+  prometheus-data:
+  grafana-data:

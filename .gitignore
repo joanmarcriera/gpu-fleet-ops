@@ -1,0 +1,15 @@
+**/results/*
+!**/results/.gitkeep
+**/__pycache__/
+**/.build/
+.venv/
+*.py[cod]
+.DS_Store
+.env
+
+# curated, scrubbed results of the 2026-10-12 H100 run are published on purpose
+!results/
+!results/2026-10-12-2x8xH100-ib/
+
+# real scrub mapping (private)
+bin/scrub-map.local.json

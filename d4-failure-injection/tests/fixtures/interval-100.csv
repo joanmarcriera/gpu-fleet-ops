@@ -1,0 +1,9 @@
+epoch_s,utc,experiment_id,attempt,rank,event,step,step_time_s,checkpoint_interval,detail
+2000.0,synthetic,interval-100,1,0,run_start,0,,100,
+2001.0,synthetic,interval-100,1,0,step,0,1.0,100,
+2002.0,synthetic,interval-100,1,0,step,1,1.0,100,
+2008.0,synthetic,interval-100,2,0,run_start,0,,100,
+2009.0,synthetic,interval-100,2,0,step,0,1.0,100,replayed
+2010.0,synthetic,interval-100,2,0,step,1,1.0,100,replayed
+2011.0,synthetic,interval-100,2,0,step,2,1.0,100,
+2012.0,synthetic,interval-100,2,0,run_end,3,,100,
